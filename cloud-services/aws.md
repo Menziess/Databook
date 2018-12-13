@@ -1,8 +1,8 @@
 ---
-description: Quick tutorial
+description: Quick tutorial.
 ---
 
-# Amazon AWS
+# AWS
 
 ## 1. Introduction
 

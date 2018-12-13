@@ -18,6 +18,8 @@ Data Scientist 👨‍🔧 and Data Scientist 👩‍🔬 are new job titles, wh
 * **Software Engineer:** designs, writes, and aims to improve quality characteristics of software for computers or other electronic devices.
 * **Data Engineers:** a Software Engineer that writes programs to automate data aggregation, [batch](https://www.quora.com/What-are-the-differences-between-batch-processing-and-stream-processing-systems) processing, [streaming](https://www.quora.com/What-are-the-differences-between-batch-processing-and-stream-processing-systems) fast data processing, and helps to deploy and scale machine learning models into production.
 
+So what are companies looking for? They are looking for **professionals**! People with a desire to learn and master new stuff, and then become an authority in their field.
+
 ## 2. Love-Hate Relationship 👨‍🔧 💔 👩‍🔬
 
 Data science and data engineering go hand in hand. A Data Engineer may aggregate batches of data overnight, so that the Data Scientist may train a machine learning model with it in a [jupyter notebook](https://jupyter.org/), after which the 👨‍🔧 and 👩‍🔬 sit around the table to extract and refactor the useful bits of the code to forge a contract and automate the process of deploying the model. Let's specify this process:
@@ -44,7 +46,7 @@ Data science and data engineering go hand in hand. A Data Engineer may aggregate
   * applying continuous integration to automate collaboration
   * apply continuous deployment so that new versions of the project are tested, built and deployed automatically
   * exposing the model to the systems that need it
-* **Provisioning:** using [Kubernetes](technologies/kubernetes.md) or [Docker Swarm](technologies/docker.md#2-2-scale-service-multiple-containers-single-node) to automatically scale up or down the service.
+* **Provisioning:** using [Kubernetes]() or [Docker Swarm](technologies/docker.md#2-2-scale-service-multiple-containers-single-node) to automatically scale up or down the service.
 
 It is understood that 👨‍🔧 are often critical of the code quality and scalability of the piece of code delivered by 👩‍🔬, which in return are unhappily surprised when they have to adjust their code only because the 👨‍🔧 is overly critical, all the while the data provided by the 👨‍🔧 wasn't all that well prepared. But despite the hate, there exists love when they work as a team, and get that model deployed successfully!
 

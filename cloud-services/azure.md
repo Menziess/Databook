@@ -1,8 +1,8 @@
 ---
-description: Quick tutorial
+description: Quick tutorial.
 ---
 
-# Microsoft Azure
+# Azure
 
 ## 1. Introduction
 

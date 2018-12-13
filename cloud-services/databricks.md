@@ -2,13 +2,7 @@
 description: Quick tutorial.
 ---
 
-# Cassandra
+# Databricks
 
 ## 1. Introduction
-
-tombstones
-
-token-ring
-
-
 
