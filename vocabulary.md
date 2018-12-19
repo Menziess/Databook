@@ -17,8 +17,8 @@ description: Complicated words.
 | ERP | Enterprise Resource Planning |
 | SAP | Systems, Applications and Products |
 | HA | High Availability |
-|  |  |
-|  |  |
+| OLAP | Online Analytical Processing |
+| DTAP | Development Testing Acceptation Production |
 
 
 
