@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Consulting](consulting.md)
+* [Collaboration](consulting.md)
+* [Consulting](consulting-1.md)
 * [Vocabulary](vocabulary.md)
 
 ## Technologies
