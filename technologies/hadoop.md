@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Hadoop
 
 ## 1. Introduction

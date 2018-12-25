@@ -8,7 +8,7 @@ A professional knows how to work with other people effectively and confidently t
 
 ## 1. Project Management
 
-Managing projects is hard, especially when you never work with the same team across projects. Every team does things differently. Each team has its own internal conflicts, strengths and weaknesses. And every project itself has its own special challenges. 
+Managing projects is hard, especially when you never work with the same team across projects. Every team does things differently. Each team has its own internal conflicts, strengths and weaknesses. And every project itself has its own special challenges.
 
 A project usually starts from some desire to solve a **stakeholder's** business problem. To deliver something that is desired, the team must ask questions to gather functional and non-functional **requirements**. Then, the team starts solving the problem at hand, and craft a demonstrable solution very early on, so that the stakeholder can verify that the team is on the right track.
 
@@ -31,7 +31,7 @@ A project usually starts from some desire to solve a **stakeholder's** business 
 * Work in progress limits force collaboration
 * No deadlines may cause developers to spend too much time on a task
 
-Scrum is more suitable for fast delivery of complex products. Kanban is better suited for continuous delivery and improvement of services. This evolutionary development framework and methodology respectively help teams optimize value, or minimize waste. 
+Scrum is more suitable for fast delivery of complex products. Kanban is better suited for continuous delivery and improvement of services. This evolutionary development framework and methodology respectively help teams optimize value, or minimize waste.
 
 You may have heard about the t-shape analogy:
 
@@ -105,8 +105,3 @@ Apply the following in specific situations:
 | Political meeting | Showing dominance over another using an aggressive or controlling handshake. Lead the other person through doors, or to the position where he should stand or sit. Show a determined but controlled expression. Show a closed posture, not open to the ideas of your political opponent. Use the "it's just so", palms vertically with a rigid slicing motion gesture. Palms down position shows "listen to me". |
 | Business meeting | Offer a trustworthy double-handed handshake where you bend your shoulders forward a little bit. Only do this if you have had a time to form an emotional bond. Use your hands, fingers pointing up, to express seriousness. Always show an open posture, hands up with 45 degrees, fingers loose from each other. Move your hand or gesture upward or outward to make the implication to growth. |
 
-## 
-
-### 
-
-### 

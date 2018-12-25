@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Spark
 
 ## 1. Introduction

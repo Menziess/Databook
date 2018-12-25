@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Kafka
 
 ## 1. Introduction

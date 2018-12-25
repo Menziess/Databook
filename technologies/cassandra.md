@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Cassandra
 
 ## 1. Introduction

@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Azure
 
 ## 1. Introduction

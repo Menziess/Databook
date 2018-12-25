@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Docker
 
 ## 1. Development

@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # AWS
 
 ## 1. Introduction

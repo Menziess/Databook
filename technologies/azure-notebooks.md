@@ -1,7 +1,3 @@
----
-description: Quick tutorial.
----
-
 # Azure Notebooks
 
 ## 1. Introduction

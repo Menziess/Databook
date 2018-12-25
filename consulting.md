@@ -6,43 +6,96 @@ description: Being able to provide professional or expert advice.
 
 A consultant is a professional who provides expert advice in a particular area. A Data Engineer 🔢 👨‍🔧 may provide expert advice in implementing new solutions from the ground up, or improving existing solutions. I both cases, it is valuable to translate business requirements into a high level architectural blueprint.
 
-## 1. Basics
+## 1. Technologies
 
-Where to start when implementing a new solution, or solving a problem within an existing solution?
+To confront you with reality, take a look at the amount of considerations a Data Engineer may have to take. Now, if you give a **piece of advice** that turned out to be **wrong**, you lose all credibility. So how do you go about making crucial decisions?
 
-A whiteboard, or a piece of paper!
+### Services
 
-Don't let yourself get intimidated by business jargon, project management procedures, or other stress factors. Identify the person who owns the problem, or the one who represents the user's best interest.
+* **Airflow**
+* **Saga**
 
-Determine whether a piece of software needs to be built, or that a service must be maintained and improved.
+### Databases
 
-## 2. Architecture
+* **Relational**
+  * small data
+  * schema and relations defined up front
+* **Document**
+  * writing data without validation
+* **Key-Value Store**
 
-There are some things that are important when it comes to architecting complex systems:
+  \* 
 
-* There is always a trade off
-* Avoid single points of failure
-* Make services as isolated as possible
-* Start stateless
+* **Wide-Column Store**
+  * schema changes
+* **Graph**
+  * can store reference in node to external database
+  * discover relationships afterward
+  * path analysis
+  * facebook same relations
+*  * [Database](https://github.com/numetriclabz/awesome-db#readme)
+  * [MySQL](https://github.com/shlomi-noach/awesome-mysql/blob/gh-pages/index.md)
+  * [SQLAlchemy](https://github.com/dahlia/awesome-sqlalchemy#readme)
+  * [InfluxDB](https://github.com/mark-rushakoff/awesome-influxdb#readme)
+  * [Neo4j](https://github.com/neueda/awesome-neo4j#readme)
+  * [MongoDB](https://github.com/ramnes/awesome-mongodb#readme) - NoSQL database.
+  * [RethinkDB](https://github.com/d3viant0ne/awesome-rethinkdb#readme)
+  * [TinkerPop](https://github.com/mohataher/awesome-tinkerpop#readme) - Graph computing framework.
+  * [PostgreSQL](https://github.com/dhamaniasad/awesome-postgres#readme) - Object-relational database.
+  * [CouchDB](https://github.com/quangv/awesome-couchdb#readme) - Document-oriented NoSQL database.
+  * [HBase](https://github.com/rayokota/awesome-hbase#readme) - Distributed, scalable, big data store.
 
-Requirements
+### Messaging
 
-Drilling down to the core of the problem
+* **Kafka**
+  * message queue 1 source multiple sources
+  * topic queue 1 source ...
+  * programs reading from kafka can be taken down, data is not lost for a predefined while
+* Kinesis
+* Event bus
 
-Balancing trade-offs of different technologies
+### Storage Formats
 
-Propose solution with SMART comparison against functional and non-functional requirements 
+* **CSV:** easy for humans
+* **Avro:** serializing messaging, more like a dictionary, schema changes. Json doesn't have this
+* **Parquet:** performance
+* **JSON:** can't change the schema, can attach Entity if al desired properties \(or more\) are present as JSON fields
 
-* [Big Data](https://github.com/onurakpolat/awesome-bigdata#readme)
-* [Public Datasets](https://github.com/awesomedata/awesome-public-datasets#readme)
-* [Hadoop](https://github.com/youngwookim/awesome-hadoop#readme) - Framework for distributed storage and processing of very large data sets.
-* [Data Engineering](https://github.com/igorbarinov/awesome-data-engineering#readme)
-* [Streaming](https://github.com/manuzhang/awesome-streaming#readme)
-* [Apache Spark](https://github.com/awesome-spark/awesome-spark#readme) - Unified engine for large-scale data processing.
+hyper lop lop
 
-## 3. Defying Gravity
+redis distributed cache
 
-A Data Engineer must be aware of the physical limitations with respect to data. For example, while I am writing this chapter, it is physically impossible to read a couple of records with top consistency from a distributed database under 150 microseconds. 
+Data consolidation \(google analytics tracker id is shared across session\)
+
+## 2. There Is Always A Trade-off
+
+To take a simple first step. Gather requirements, and drill down to the core of the problem, only then you can consider solutions:
+
+* Outsourcing vs In-house
+* Monolith vs Microservice
+* Streaming vs Batching
+* Hadoop vs Cassandra
+* Python vs Scala
+* Azure vs AWS
+* CSV vs Parquet
+* SQL vs NoSQL
+
+Does the system have to be real-time? What's the minimal required response time? What kind of language is the team using? Is performance more important than readability? Should data be available and highly consistent? Is there enough time, or enough money? 
+
+## 3. Architectural Advice
+
+| Advice | Elucidation |
+| :--- | :--- |
+| **There is always a trade-off** | The trade-offs are sometimes hard to find, and balancing occurs while developing a system. There are no silver bullets. Don't give answers you don't have. Research pros and cons, make an informed decision. |
+| **Make services as isolated as possible** |  |
+| **Avoid premature optimizations** | It is considered as breaking [YAGNI](vocabulary.md). Choosing Parquet over CSV for example, just because it is performing better. You can always make this choice later. |
+| **Write tests before refactoring** | This way you can safely modify code, and verify that the output is still exactly the same. |
+| **Avoid single points of failure** |  |
+| **Start stateless** |  |
+
+## CAP Theorem
+
+A Data Engineer must be aware of the physical limitations with respect to data. For example, it is physically impossible to read a couple of records with top consistency from a distributed database under 150 microseconds.
 
 Consider the order of magnitudes between different operations displayed here:
 
@@ -86,71 +139,10 @@ Because networks are not reliable, we must tolerate partitions in a distributed 
 * **CP:** wait for a response from the partitioned node which could result in a timeout error. The system can also choose to return an error, depending on the scenario you desire. \(Choose Consistency over Availability when your business requirements dictate atomic reads and writes\)
 * **AP:** return the most recent version of the data you have, which could be stale. This system state will also accept writes that can be processed later when the partition is resolved. \(Choose when consistency is not crucial\)
 
-## 4. Technologies
-
-### Services
-
-* **Airflow**
-* **Saga**
-
-### Databases
-
-* **Relational**
-  * small data
-  * schema and relations defined up front
-* **Document**
-  * writing data without validation
-* **Key-Value Store**
-  * 
-* **Wide-Column Store**
-  * schema changes
-* **Graph**
-  * can store reference in node to external database
-  * discover relationships afterward
-  * path analysis
-  * facebook same relations
-
-### Messaging
-
-* **Kafka**
-  * message queue 1 source multiple sources
-  * topic queue 1 source ...
-  * programs reading from kafka can be taken down, data is not lost for a predefined while
-* Kinesis
-* Event bus
-
-### Storage Formats
-
-* **CSV:** easy for humans
-* **Avro:** serializing messaging, more like a dictionary, schema changes. Json doesn't have this
-* **Parquet:** performance
-* **JSON:** can't change the schema, can attach Entity if al desired properties \(or more\) are present as JSON fields
-
-hyper lop lop
-
-redis distributed cache
-
-Data consolidation \(google analytics tracker id is shared across session\)
-
-## 4. Databases
-
-ACID
+## ACID
 
 * **Atomicity:** guarantees that each transaction is handled as a single unit. A transaction consisting of multiple statements either succeeds completely \(a change\), or fails completely \(no change\).
 * **Consistency:** ensures validity of database with constraints, cascades, and triggers.
 * **Isolation:** ensures concurrent transactions to leave the database state as if they were executed sequentially.
 * **Durability:** guarantees that once a transaction has been committed, it will remain committed even in case of a system failure.
 
-
-
-* [Database](https://github.com/numetriclabz/awesome-db#readme)
-* [MySQL](https://github.com/shlomi-noach/awesome-mysql/blob/gh-pages/index.md)
-* [SQLAlchemy](https://github.com/dahlia/awesome-sqlalchemy#readme)
-* [InfluxDB](https://github.com/mark-rushakoff/awesome-influxdb#readme)
-* [Neo4j](https://github.com/neueda/awesome-neo4j#readme)
-* [MongoDB](https://github.com/ramnes/awesome-mongodb#readme) - NoSQL database.
-* [RethinkDB](https://github.com/d3viant0ne/awesome-rethinkdb#readme)
-* [TinkerPop](https://github.com/mohataher/awesome-tinkerpop#readme) - Graph computing framework.
-* [PostgreSQL](https://github.com/dhamaniasad/awesome-postgres#readme) - Object-relational database.
-* [CouchDB](https://github.com/quangv/awesome-couchdb#readme) - Document-oriented NoSQL database.
-* [HBase](https://github.com/rayokota/awesome-hbase#readme) - Distributed, scalable, big data store.

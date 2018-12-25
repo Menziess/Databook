@@ -1,7 +1,3 @@
----
-description: Everything about data engineering.
----
-
 # Introduction
 
 The high demand for Data Engineers 🔢 👨‍🔧 👨‍🔧 may motivate software-savvy people to venture into the world of data. There is so much to learn, so little time. That is why concise summaries and code examples can be a useful mean to ease the strain on human's inherently limited memory.
@@ -58,7 +54,7 @@ Where Data Analysts and BI Developers dealt with Data Warehouses with static str
 * **Variety:** structured and unstructured data of any type and format
 * **Velocity:** flowing streams of fast data
 
-Organizations grow into Big Data as they become experienced with processing data into valuable information, from left to right:
+Organizations grow into [Big Data](https://github.com/onurakpolat/awesome-bigdata#readme) as they become experienced with processing data into valuable information, from left to right:
 
 |  | Exploring | Learning | Doing | Mastering | Teaching |
 | :--- | :--- | :--- | :--- | :--- | :--- |

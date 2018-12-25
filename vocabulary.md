@@ -1,7 +1,3 @@
----
-description: Complicated words.
----
-
 # Vocabulary
 
 | Term | Meaning |
@@ -14,6 +10,8 @@ description: Complicated words.
 | Microservice | Architectural style that structures an application as a collection of loosely coupled services |
 | Monolith | A single-tiered software application in which the user interface and data access code are combined into a single program from a single platform |
 | DevOps | Development Operations |
+| YAGNI | You aren't gonna need it |
+| SPOF | Single Points of Failure |
 | SOA | Service Oriented Architecture |
 | ETL | Extract Transform Load |
 | ESB | Enterprise Service Bus |
