@@ -52,7 +52,7 @@ It is understood that 👨‍🔧 are often critical of the code quality and sca
 
 ## 3. Big Data
 
-Where Data Analysts and BI Developers dealt with Data Warehouses with static structured Terabytes of data, Data Engineers deal with Big Data:
+Where Data Analysts and BI Developers dealt with Data Warehouses with static structured Terabytes of data, Data Engineers deal with:
 
 * **Volume:** petabytes of data
 * **Variety:** structured and unstructured data of any type and format
@@ -73,5 +73,10 @@ Organizations grow into Big Data as they become experienced with processing data
 | Infrastructure | Classic data centre | "Lift and shift" | Hybrid | Automated | Infrastructure as code in the cloud |
 |  |  |  |  |  |  |
 
+From here on, this gitbook will focus on two sets of skills:
 
+* Architecture, Consulting, Project Management, Collaboration, Mature Decisions
+* Technologies
+
+The first set of skills is something that professionals should strive to master. The second set contains summaries of technologies that will continuously change over time.
 
