@@ -4,7 +4,7 @@ description: Working with people.
 
 # Collaboration
 
-A professional knows how to work with other people effectively and confidently to achieve greater goals. This doesn't just infest itself in the ability to manage and plan resources, but also the ability make the right impressions.
+A professional knows how to work with other people effectively and confidently to achieve greater goals. This doesn't just infest itself in the ability to manage resources, but also the ability make the right impressions.
 
 ## 1. Project Management
 
@@ -67,10 +67,9 @@ Besides choosing a particular strategy, it is essential to develop your all-roun
 
 ### **Body Language**
 
-Some pieces of advice about body language should be applied in all occasions, and some depend on the situation. In all cases:
+Apply these in all situations:
 
 * Don't ever yawn
-* Don't keep your feet together
 * Don't keep your knees together \(or crossed\)
 * Keep your hands alongside your body, or lay your arms on your upper leg
 * Stand up straight with your shoulders back, or sit up on the front of your seat
@@ -78,14 +77,16 @@ Some pieces of advice about body language should be applied in all occasions, an
 * Initiation of gestures demonstrates confidence, normally the person with more power will initiate the handshake \(if you wish to show respect, you may wish to wait\)
 * Before a handshake, make sure you hands are dry, slap them on your thy to dry them up. Match the level of pressure you receive
 * Keep eye contact \(don't stare\) when talking to someone to express confidence \(firm expression\) or respect \(warm expression\)
-* Avoid eye contact when someone is talking to you to express dominance \(firm expression\) or disrespect \(nonchalant expression\)
+* Firmly look away when someone is talking to you to express dominance \(firm expression\) or disrespect \(nonchalant expression\)
 * Smile to express comfort and friendliness
+
+Apply the following in specific situations:
 
 | Situation | Advice |
 | :--- | :--- |
 | Job interview | Showing determination and confidence by initiating with a firm handshake with eye contact. Let yourself be led to your seat. Be thankful, but don't come over as someone that needs a babysitter. |
-| Political meeting | Showing dominance over another using an aggressive or controlling handshake. Lead the other person through doors, or to the position where he should stand or sit. Show a determined but controlled expression. Show a closed posture, not open to the ideas of your political opponent. |
-| Business meeting | Offer a trustworthy double-handed handshake where you bend your shoulders forward a little bit. Only do this if you have had a time to form an emotional bond. Use your hands, fingers pointing up, to express seriousness. Always show an open posture. |
+| Political meeting | Showing dominance over another using an aggressive or controlling handshake. Lead the other person through doors, or to the position where he should stand or sit. Show a determined but controlled expression. Show a closed posture, not open to the ideas of your political opponent. Use the "it's just so", palms vertically with a rigid slicing motion gesture. Palms down position shows "listen to me". |
+| Business meeting | Offer a trustworthy double-handed handshake where you bend your shoulders forward a little bit. Only do this if you have had a time to form an emotional bond. Use your hands, fingers pointing up, to express seriousness. Always show an open posture, hands up with 45 degrees, fingers loose from each other. Move your hand or gesture upward or outward to make the implication to growth. |
 
 ## 
 
