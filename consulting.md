@@ -1,34 +1,51 @@
 ---
-description: Working with people.
+description: Working in teams.
 ---
 
 # Collaboration
 
-A professional knows how to work with other people effectively and confidently to achieve greater goals. This doesn't just infest itself in the ability to manage resources, but also the ability make the right impressions.
+A professional knows how to work with other people effectively and confidently to achieve specified goals at the specified time. This doesn't just infest itself in the ability to manage resources, but also the ability make the right impressions.
 
 ## 1. Project Management
 
-Scrum is more suitable for fast delivery of value. Kanban is better suited for continuous delivery of services.
+Managing projects is hard, especially when you never work with the same team across projects. Every team does things differently. Each team has its own internal conflicts, strengths and weaknesses. And every project itself has its own special challenges. 
 
-### Scrum
+A project usually starts from some desire to solve a **stakeholder's** business problem. To deliver something that is desired, the team must ask questions to gather functional and non-functional **requirements**. Then, the team starts solving the problem at hand, and craft a demonstrable solution very early on, so that the stakeholder can verify that the team is on the right track.
 
-* A lightweight framework for iterative delivery optimizing value
+### Scrum - Agile
+
+* A lightweight framework for iterative delivery, optimizing value
 * Predefined roles
 * Changes not allowed \(during sprint\)
 * Measures team velocity
 * Based on **Empiricism \(**believing that knowledge comes from experience\), having pillars: transparency, inspection, adaptation
 * Values: commitment, courage, focus, openness, respect
-* Developers may sacrifice quality because of deadlines
+* Deadlines may cause developers to sacrifice quality
 
-### Kanban
+### Kanban - Lean
 
-* A management method designed to continuously improve service delivery
+* A management method designed to continuously improve service delivery, minimizing waste
 * No predefined roles
 * Changes allowed
 * Measures cycle time
-* Work in progress forces collaboration
+* Work in progress limits force collaboration
+* No deadlines may cause developers to spend too much time on a task
 
-## 2. Communication Skills
+Scrum is more suitable for fast delivery of complex products. Kanban is better suited for continuous delivery and improvement of services. This evolutionary development framework and methodology respectively help teams optimize value, or minimize waste. 
+
+You may have heard about the t-shape analogy:
+
+![](.gitbook/assets/image%20%283%29.png)
+
+Where the horizontal bar represent the small bit of experience in different disciplines, and the vertical bar represents a lot of experience in a particular discipline. Instead of separating teams based on disciplines, it is valuable to have people with different disciplines mixed together in **cross-functional** teams.
+
+| Multidisciplinary people | Cross-functional team |
+| :--- | :--- |
+| ![](.gitbook/assets/image%20%282%29.png) | ![](.gitbook/assets/image%20%287%29.png) |
+
+As each team has its strengths and weaknesses, so does each member within these teams. It is important to be aware of this fact to optimize productivity, creativity, stability, and precision of the team.
+
+## 2. People Management
 
 There's a universal language of behavior called the **DISC** Personality System. Research has shown that behavioral characteristics can be grouped together in four major groups.
 

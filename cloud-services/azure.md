@@ -13,7 +13,7 @@ Azure is a cloud computing platform that offers PaaS, IaaS and SaaS, supporting 
 * **IaaS:** Infrastructure as a Service
 * **SaaS:** Software as a Service
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 Services / Resources:
 
@@ -205,7 +205,7 @@ az storage account create -n <storageaccountname> -g <resourcegroupname> -l <dat
 
 A data factory is an automated [pipeline](https://docs.microsoft.com/en-us/azure/data-factory/v1/data-factory-create-pipelines) where activities such as ingestion, processing and publishing can be [scheduled](https://docs.microsoft.com/en-us/azure/data-factory/v1/data-factory-scheduling-and-execution).
 
-![A Data Factory Pipeline](../.gitbook/assets/image%20%282%29.png)
+![A Data Factory Pipeline](../.gitbook/assets/image%20%284%29.png)
 
 **Tip:** follow along with a [tutorial](https://docs.microsoft.com/en-us/azure/data-factory/quickstart-create-data-factory-portal) to set up a pipeline.
 
