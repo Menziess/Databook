@@ -20,5 +20,3 @@
 * [AWS](cloud-services/aws.md)
 * [Azure](cloud-services/azure.md)
 
-## Stacks
-

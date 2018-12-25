@@ -76,7 +76,7 @@ Organizations grow into Big Data as they become experienced with processing data
 From here on, this gitbook will focus on two sets of skills:
 
 * Architecture, Consulting, Project Management, Collaboration, Mature Decisions
-* Technologies
+* Technologies, Services
 
 The first set of skills is something that professionals should strive to master. The second set contains summaries of technologies that will continuously change over time.
 
