@@ -11,6 +11,9 @@
 | Monolith | A single-tiered software application in which the user interface and data access code are combined into a single program from a single platform |
 | DevOps | Development Operations |
 | YAGNI | You aren't gonna need it |
+| SaaS | Software as a Service |
+| IaaS | Infrastructure as a Service |
+| PaaS | Platform as a Service  |
 | SPOF | Single Points of Failure |
 | SOA | Service Oriented Architecture |
 | ETL | Extract Transform Load |

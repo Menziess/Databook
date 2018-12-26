@@ -25,26 +25,9 @@ Does the system have to be real-time? What's the minimal required response time?
 The number of possible combinations between different technologies is vast. Take a look at the following lists of technologies, while we leave out the implementation details for now. Now, if you give a **piece of advice** that turned out to be **wrong**, you lose all credibility. So how do you go about making crucial decisions?
 
 * [Databases](https://github.com/igorbarinov/awesome-data-engineering#databases)
-  * **Relational**
-    * small data
-    * schema and relations defined up front
-  * **Document**
-    * writing data without validation
-  * **Key-Value Store**
-  * **Wide-Column Store**
-    * schema changes
-  * **Graph**
-    * can store reference in node to external database
-    * discover relationships afterward
-    * path analysis
-    * facebook same relations
 * [Data Ingestion](https://github.com/igorbarinov/awesome-data-engineering#data-ingestion)
 * [File System](https://github.com/igorbarinov/awesome-data-engineering#file-system)
 * [Serialization Format](https://github.com/igorbarinov/awesome-data-engineering#serialization-format)\*\*\*\*
-  * **CSV:** easy for humans
-  * **Avro:** serializing messaging, more like a dictionary, schema changes. Json doesn't have this
-  * **Parquet:** performance
-  * **JSON:** can't change the schema, can attach Entity if al desired properties \(or more\) are present as JSON fields
 * [Stream Processing](https://github.com/igorbarinov/awesome-data-engineering#stream-processing)
 * [Batch Processing](https://github.com/igorbarinov/awesome-data-engineering#batch-processing)
 * [Charts and Dashboards](https://github.com/igorbarinov/awesome-data-engineering#charts-and-dashboards)
@@ -103,4 +86,41 @@ Then there is **ACID**:
 * **Consistency:** ensures validity of database with constraints, cascades, and triggers.
 * **Isolation:** ensures concurrent transactions to leave the database state as if they were executed sequentially.
 * **Durability:** guarantees that once a transaction has been committed, it will remain committed even in case of a system failure.
+
+@todo:
+
+* **Relational**
+  * small data
+  * schema and relations defined up front
+* **Document**
+  * writing data without validation
+* **Key-Value Store**
+* **Wide-Column Store**
+  * schema changes
+* **Graph**
+  * can store reference in node to external database
+  * discover relationships afterward
+  * path analysis
+  * facebook same relations
+
+## 4. Data Ingestion
+
+## 5. File System
+
+## 6. Serialization Format
+
+* **CSV:** easy for humans
+* **Avro:** serializing messaging, more like a dictionary, schema changes. Json doesn't have this
+* **Parquet:** performance
+* **JSON:** can't change the schema, can attach Entity if al desired properties \(or more\) are present as JSON fields
+
+## 7. Stream Processing
+
+## 8. Batch Processing
+
+## 9. Charts and Dashboards
+
+## 10. Workflow
+
+## 11. Monitoring
 
