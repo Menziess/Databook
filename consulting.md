@@ -22,7 +22,7 @@ Does the system have to be real-time? What's the minimal required response time?
 
 ## 2. Technologies
 
-The number of possible combinations between different technologies is vast. Take a look at the following lists of technologies, while we leave out the implementation details for now. Now, if you give a **piece of advice** that turned out to be **wrong**, you lose all credibility. So how do you go about making crucial decisions?
+The number of possible combinations between different technologies is vast. Take a look at the following **technologies** within each **subject**:
 
 * [Databases](https://github.com/igorbarinov/awesome-data-engineering#databases)
 * [Data Ingestion](https://github.com/igorbarinov/awesome-data-engineering#data-ingestion)
@@ -33,6 +33,10 @@ The number of possible combinations between different technologies is vast. Take
 * [Charts and Dashboards](https://github.com/igorbarinov/awesome-data-engineering#charts-and-dashboards)
 * [Workflow](https://github.com/igorbarinov/awesome-data-engineering#workflow)
 * [Monitoring](https://github.com/igorbarinov/awesome-data-engineering#monitoring)
+
+Now, if you give a **piece of advice** that turned out to be **wrong**, you lose all credibility. So how do you go about making crucial architectural decisions? First, you should be aware that these **subjects** exist, second you should know some advantages and disadvantages of some **technologies** of each subject.
+
+You can do this by reading the rest of this chapter!
 
 ## 3. Databases
 
