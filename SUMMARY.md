@@ -2,8 +2,8 @@
 
 * [Intro](README.md)
 * [Consulting](consulting.md)
-* [Teamwork](collaboration.md)
-* [Jargon](vocabulary.md)
+* [Teamwork](teamwork.md)
+* [Jargon](jargon.md)
 
 ## Technologies
 
