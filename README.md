@@ -2,7 +2,7 @@
 
 The high demand for Data Engineers 🔢 👨‍🔧 👨‍🔧 may motivate software-savvy people to venture into the world of data. There is so much to learn, so little time. That is why concise summaries and code examples can be a useful mean to ease the strain on human's inherently limited memory.
 
-**Tip:** look up unfamiliar words in the [jargon](vocabulary.md).
+**Tip:** look up unfamiliar words in the [jargon](jargon.md).
 
 ## 1. Intro of the Intro
 
@@ -42,7 +42,7 @@ Data science and data engineering go hand in hand. A Data Engineer may aggregate
   * applying continuous integration to automate collaboration
   * apply continuous deployment so that new versions of the project are tested, built and deployed automatically
   * exposing the model to the systems that need it
-* **Provisioning:** using [Kubernetes]() or [Docker Swarm](technologies/docker.md#2-2-scale-service-multiple-containers-single-node) to automatically scale up or down the service.
+* **Provisioning:** using Kubernetes or [Docker Swarm](technologies/docker.md#2-2-scale-service-multiple-containers-single-node) to automatically scale up or down the service.
 
 It is understood that 👨‍🔧 are often critical of the code quality and scalability of the piece of code delivered by 👩‍🔬, which in return are unhappily surprised when they have to adjust their code only because the 👨‍🔧 is overly critical, all the while the data provided by the 👨‍🔧 wasn't all that well prepared. But despite the hate, there exists love when they work as a team, and get that model deployed successfully!
 

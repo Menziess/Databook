@@ -15,7 +15,7 @@ Does the system have to be real-time? What's the minimal required response time?
 | **There is always a trade-off** | The trade-offs are sometimes hard to find, and balancing occurs while developing a system. There are no silver bullets. Don't give answers you don't have. Research pros and cons, make an informed decision. |
 | **Take maturity into account** | Mature technologies are often more stable, and easier to implement because of greater adoption among adjacent technologies |
 | **Make services as isolated as possible** |  |
-| **Avoid premature optimizations** | It is considered as breaking [YAGNI](vocabulary.md). Choosing Parquet over CSV for example, just because it is performing better. You can always make this choice later. |
+| **Avoid premature optimizations** | It is considered as breaking [YAGNI](jargon.md). Choosing Parquet over CSV for example, just because it is performing better. You can always make this choice later. |
 | **Write tests before refactoring** | This way you can safely modify code, and verify that the output is still exactly the same. |
 | **Avoid single points of failure** |  |
 | **Start stateless** |  |

@@ -13,7 +13,7 @@
 | YAGNI | You aren't gonna need it |
 | SaaS | Software as a Service |
 | IaaS | Infrastructure as a Service |
-| PaaS | Platform as a Service  |
+| PaaS | Platform as a Service |
 | SPOF | Single Points of Failure |
 | SOA | Service Oriented Architecture |
 | ETL | Extract Transform Load |
@@ -28,6 +28,4 @@
 | HA | High Availability |
 | OLAP | Online Analytical Processing |
 | DTAP | Development Testing Acceptation Production |
-
-
 

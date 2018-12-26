@@ -66,7 +66,7 @@ The infrastructure of an application is typically made up of many different comp
 
 It is important to know that CLI tools use REST requests to the Azure portal in the background. The portal generates the templates that deploy extra resources.
 
-**Tip:** An important concept in every deployment request is [idempotence](../vocabulary.md).
+**Tip:** An important concept in every deployment request is [idempotence]().
 
 ### 3.2 ARM Template
 
