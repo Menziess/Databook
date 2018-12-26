@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Intro](README.md)
 * [Consulting](consulting.md)
 * [Teamwork](collaboration.md)
 * [Jargon](vocabulary.md)
