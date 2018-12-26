@@ -2,7 +2,7 @@
 
 The high demand for Data Engineers 🔢 👨‍🔧 👨‍🔧 may motivate software-savvy people to venture into the world of data. There is so much to learn, so little time. That is why concise summaries and code examples can be a useful mean to ease the strain on human's inherently limited memory.
 
-**Tip:** look up unfamiliar words in the [vocabulary](vocabulary.md).
+**Tip:** look up unfamiliar words in the [jargon](vocabulary.md).
 
 ## 1. Introduction of the Introduction
 

@@ -1,4 +1,4 @@
-# Vocabulary
+# Jargon
 
 | Term | Meaning |
 | :--- | :--- |
