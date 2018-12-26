@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Consulting](consulting.md)
-* [Collaboration](collaboration.md)
+* [Teamwork](collaboration.md)
 * [Vocabulary](vocabulary.md)
 
 ## Technologies

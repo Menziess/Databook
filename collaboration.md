@@ -2,7 +2,7 @@
 description: Working in teams.
 ---
 
-# Collaboration
+# Teamwork
 
 A professional knows how to work with other people effectively and confidently to achieve specified goals at the specified time. This doesn't just infest itself in the ability to manage resources, but also the ability make the right impressions.
 
