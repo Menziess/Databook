@@ -217,7 +217,26 @@ BASE is an acronym that describes eventually consistent services \(optimistic re
 
 ## 4. Data Ingestion
 
+When moving data, especially unstructured data, from where it is originated into a system where it can be stored and analyzed, we are talking about ingestion. This process may be continuous or asynchronous, real-time or batched, from a wide variety of data sources.
 
+### Batch Transferring
+
+Data can be ingested in a batch. Apache Sqoop is capable to efficiently transfer bulk data between Apache Hadoop and structured datastores such as relational databases. Embulk helps transfer data between various databases, storages, file formats, and cloud services.
+
+### Real-time Messaging
+
+Then there's real-time data ingestion. When many sources are sending data to your API's, and your API goes down, the data is lost, and the application may show errors. If you put a message broker in between the application and API, the data is temporarily stored so that the API can access it when it's up again. This may also be useful when you want to replace or update an API or service. It **decouples** processing from data producers.
+
+Great use cases for messaging are:
+
+* Website Activity Tracking
+* Collecting Metric Data
+* Log Aggregation
+* Stream Processing
+* Event Sourcing
+* Commit Log
+
+[Kafka](technologies/kafka.md), for example, allows \([reusable](https://kafka.apache.org/documentation.html#connect)\) **producers** to publish a stream of records to one or more topics, and allows **consumers** to subscribe to one or more topics, while processing the stream for them.
 
 ## 5. File System
 
