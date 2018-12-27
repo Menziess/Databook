@@ -8,7 +8,7 @@ This chapter is a condensed walk-through of the official Docker [Getting Started
 
 A container can be run with a shared volume, so that code changes are immediately visible, and the container is deleted after use. Create a docker image with debug enabled by setting the `ENV FLASK_DEBUG` flag to `1`, then run:
 
-```text
+```bash
 docker run -p 80:80 --rm menziess/python-vscode
 ```
 
@@ -16,7 +16,7 @@ docker run -p 80:80 --rm menziess/python-vscode
 
 Clone this repository and create a virtual environment with a tool such as 'virtualenv' in the root folder, and run:
 
-```text
+```bash
 source ./development.sh
 ```
 
@@ -24,13 +24,13 @@ This will activate the virtual environment and install dev dependencies and comm
 
 Run the flask app:
 
-```text
+```bash
 flask run
 ```
 
 Run tests manually:
 
-```text
+```bash
 python -m pytest test/
 ```
 
@@ -50,20 +50,20 @@ For example: an application, or a stack, may contain a database service, and a w
 
 Verify that the Dockerfile exists
 
-```text
+```bash
 $ ls
 Dockerfile        app.py            requirements.txt
 ```
 
 Build the image from the dockerfile
 
-```text
+```bash
 docker build -t menziess/python-vscode:latest .
 ```
 
 Show the image that has been built
 
-```text
+```bash
 $ docker image ls
 
 REPOSITORY             TAG                 IMAGE ID
@@ -72,13 +72,13 @@ menziess/python-vscode latest              326387cea398
 
 Run the app in detached mode
 
-```text
+```bash
 docker run -p 80:80 menziess/python-vscode
 ```
 
 Show the running containers
 
-```text
+```bash
 $ docker container ls
 CONTAINER ID        IMAGE                  COMMAND             CREATED
 1fa4ab2cf395        menziess/python-vscode "python app.py"     28 seconds ago
@@ -86,13 +86,13 @@ CONTAINER ID        IMAGE                  COMMAND             CREATED
 
 Stop the running container
 
-```text
+```bash
 docker container stop 1fa4ab2cf395
 ```
 
 Push container
 
-```text
+```bash
 docker login
 docker push menziess/python-vscode
 ```
@@ -101,32 +101,32 @@ docker push menziess/python-vscode
 
 Verify that the `docker-compose.yml` file exists
 
-```text
+```bash
 $ ls
 Dockerfile        app.py            requirements.txt      docker-compose.yml
 ```
 
 We initialize a swarm \(of one node, our local computer\)
 
-```text
+```bash
 docker swarm init
 ```
 
 Then we deploy our service
 
-```text
+```bash
 docker stack deploy -c docker-compose.yml getstartedlab
 ```
 
 And we scale it by increasing the number of replicas in the .yml file, and simply run the previous command again
 
-```text
+```bash
 docker stack deploy -c docker-compose.yml getstartedlab
 ```
 
 We take down the app, and leave the swarm
 
-```text
+```bash
 docker stack rm getstartedlab
 docker swarm leave --force
 ```
@@ -135,27 +135,27 @@ docker swarm leave --force
 
 Start two VM's using virtualbox and docker-machine
 
-```text
+```bash
 docker-machine create --driver virtualbox myvm1
 docker-machine create --driver virtualbox myvm2
 ```
 
 Initialize the first VM as a swarm manager, as we did in 3.2
 
-```text
+```bash
 docker-machine ls
 docker-machine ssh myvm1 "docker swarm init --advertise-addr <myvm1 ip>"
 ```
 
 Copy the command that is show in terminal, and ssh into the second VM, then paste the command to add it as a worker to the swarm
 
-```text
+```bash
 docker-machine ssh myvm2 "<the command that is shown>"
 ```
 
 Show all the nodes in the swarm
 
-```text
+```bash
 docker-machine ssh myvm1 "docker node ls"
 ```
 
@@ -163,7 +163,7 @@ Now you can walk through 3.2 again, and deploy the stack, but on the distributed
 
 Finally, we can leave the swarm from within each VM, remove the stack
 
-```text
+```bash
 docker-machine ssh myvm2 "docker swarm leave"
 docker-machine ssh myvm1 "docker swarm leave --force"
 
@@ -176,7 +176,7 @@ docker-machine stop myvm2
 
 We will expand our `docker-compose.yml` file by adding more services. We will add a docker visualizer and a redis database. The database will require a volume that is stored on the swarm manager called `/data`, let's make that folder and redeploy
 
-```text
+```bash
 docker-machine ssh myvm1 "mkdir ./data"
 docker stack deploy -c docker-compose.yml getstartedlab
 ```
