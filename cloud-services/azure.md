@@ -9,7 +9,7 @@ Azure is a cloud computing platform that offers PaaS, IaaS and SaaS, supporting 
 * **IaaS:** Infrastructure as a Service
 * **SaaS:** Software as a Service
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 Services / Resources:
 

@@ -10,6 +10,8 @@
 | Microservice | Architectural style that structures an application as a collection of loosely coupled services |
 | Monolith | A single-tiered software application in which the user interface and data access code are combined into a single program from a single platform |
 | DevOps | Development Operations |
+| DDB\(M\)S | Distributed Database \(Management\) System |
+| RDB\(M\)S | Relational Database \(Management\) System |
 | YAGNI | You aren't gonna need it |
 | SaaS | Software as a Service |
 | IaaS | Infrastructure as a Service |
@@ -28,4 +30,6 @@
 | HA | High Availability |
 | OLAP | Online Analytical Processing |
 | DTAP | Development Testing Acceptation Production |
+| CRUD | Create Read Update Delete |
+| ORM | Object Relational Mapping |
 
