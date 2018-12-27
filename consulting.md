@@ -238,7 +238,7 @@ Great use cases for messaging are:
 * Event Sourcing
 * Commit Log
 
-[Kafka](technologies/kafka.md), for example, allows \([reusable](https://kafka.apache.org/documentation.html#connect)\) **producers** to publish a stream of records to one or more topics, and allows **consumers** to subscribe to one or more topics, while processing the stream for them.
+[Kafka](technologies/kafka.md), for example, allows **producers** to publish a stream of records to one or more topics, and allows **consumers** to subscribe to one or more topics, while processing the stream for them.
 
 ## 5. File System
 
@@ -348,7 +348,7 @@ The files that you store on the file system may be stored in a particular format
 
 ## 7. Stream Processing
 
-Stream processing is a paradigm, equivalent to reactive programming, allowing for more parallelism. A stream is an unbounded sequence of something. In order to process an endless sequence of data, you would have to cut the sequence somewhere, store it, then process it, and then do the next batch and worry about aggregating the data at some point. This would require heavy machinery, to handle large batches of data. And some data is so huge by nature, that it is impossible to store it all.
+Stream processing is a paradigm, equivalent to reactive programming, allowing for more parallelism. A stream is an unbounded sequence of something. In order to process an endless sequence of data, you would have to cut the sequence somewhere, store it, then process it, and then do the next batch and worry about aggregating the data at some point. In some cases speedy results are desired.
 
 ### Native Streaming
 
@@ -360,9 +360,39 @@ Spark Streaming, Storm-Trident, micro batch records, introducing a small delay. 
 
 ## 8. Batch Processing
 
-## 9. Charts and Dashboards
+If results are required only once an hour or once a day, it may not be required to set up and maintain a streaming solution. In this case, data may be appended to a parquet file, and processed overnight. But processing all this data may take days, or weeks. For this problem, [Hadoop](technologies/hadoop.md) was brought into existence. Map-Reduce in combination with HDFS is able to process distributed data in a distributed fashion, in which it writes intermediate results to disk, which was a slow process. [Spark](technologies/spark.md) introduced in-memory processing, which drastically improved performance, because it only had to write the end result to HDFS or some other data source. That brings us to scheduling!
 
 ## 10. Workflow
 
-## 11. Monitoring
+Airflow is one such scheduling tool, it uses your defined DAG's to schedule tasks, which you can keep track of in the web interface:
+
+```bash
+# airflow needs a home, ~/airflow is the default,
+# but you can lay foundation somewhere else if you prefer
+# (optional)
+export AIRFLOW_HOME=~/airflow
+
+# install from pypi using pip
+pip install apache-airflow
+
+# initialize the database
+airflow initdb
+
+# start the web server, default port is 8080
+airflow webserver -p 8080
+
+# start the scheduler
+airflow scheduler
+
+# visit localhost:8080 in the browser and enable the example dag in the home page
+```
+
+A DAG is defined in a python file:
+
+```python
+dag = DAG(
+    'tutorial', default_args=default_args, schedule_interval=timedelta(days=1))
+```
+
+Other scheduling tools are available, mostly depending on the cloud platform that you're using.
 

@@ -32,6 +32,7 @@
 | ERP | Enterprise Resource Planning |
 | SAP | Systems, Applications and Products |
 | ORM | Object Relational Mapping |
+| DAG | Directed Acyclic Graph |
 | HA | High Availability |
 | MR | Map-Reduce |
 | ML | Machine Learning |
