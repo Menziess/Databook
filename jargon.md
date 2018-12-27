@@ -13,6 +13,9 @@
 | DDB\(M\)S | Distributed Database \(Management\) System |
 | RDB\(M\)S | Relational Database \(Management\) System |
 | YAGNI | You aren't gonna need it |
+| OLAP | Online Analytical Processing |
+| DTAP | Development Testing Acceptation Production |
+| CRUD | Create Read Update Delete |
 | SaaS | Software as a Service |
 | IaaS | Infrastructure as a Service |
 | PaaS | Platform as a Service |
@@ -28,9 +31,11 @@
 | CAP | Consistency, Availability, Partition Tolerance |
 | ERP | Enterprise Resource Planning |
 | SAP | Systems, Applications and Products |
-| HA | High Availability |
-| OLAP | Online Analytical Processing |
-| DTAP | Development Testing Acceptation Production |
-| CRUD | Create Read Update Delete |
 | ORM | Object Relational Mapping |
+| HA | High Availability |
+| MR | Map-Reduce |
+| ML | Machine Learning |
+| AI | Artificial Intelligence |
+
+
 

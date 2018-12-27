@@ -240,12 +240,107 @@ Great use cases for messaging are:
 
 ## 5. File System
 
+File Systems such as [HDFS](technologies/hadoop.md) and [AWS](cloud-services/aws.md) S3 are used to store files. In the context of Data Engineering, files may be large files of data, not just images or videos. It may be used to store serialized files, described in the next section.
+
+When would you need a File System? When you want to store or process massive files using [Spark](technologies/spark.md) for example. 
+
+|  | S3 | HDFS |
+| :--- | :--- | :--- |
+| Elasticity | Yes | No |
+| Cost/TB/Month | $23 | $206 |
+| Availability | 99.99% | 99.9% |
+| Durability | 99.999999999% | 99.9999% |
+| Transactional writes | Yes with DBIO | Yes |
+
 ## 6. Serialization Format
 
-* **CSV:** easy for humans
-* **Avro:** serializing messaging, more like a dictionary, schema changes. Json doesn't have this
-* **Parquet:** performance
-* **JSON:** can't change the schema, can attach Entity if al desired properties \(or more\) are present as JSON fields
+The files that you store on the file system may be stored in a particular format. How do you choose the right format?
+
+* What type of data do you have?
+* Is the desired format compatible with your processing tools?
+* What are your file sizes?
+* Do you have to be able to split the files for map-reduce style processing?
+* Do the schema's evolve over time?
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Format</th>
+      <th style="text-align:left">Advantages</th>
+      <th style="text-align:left">Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>Text</p>
+        <p>CSV</p>
+        <p>TSV</p>
+      </td>
+      <td style="text-align:left">
+        <p>Readable</p>
+        <p>Easy to implement</p>
+      </td>
+      <td style="text-align:left">Adding large amounts of data to HDFS quickly</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">JSON</td>
+      <td style="text-align:left">Dictionary-like</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Avro</td>
+      <td style="text-align:left">
+        <p>Schema evolution (allows schema change)</p>
+        <p>Serialization</p>
+        <p>Row-based binary format</p>
+        <p>Block compression</p>
+        <p>Splittable</p>
+      </td>
+      <td style="text-align:left">Event data that changes over time</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SEQ</td>
+      <td style="text-align:left">
+        <p>Row oriented</p>
+        <p>Splittable</p>
+        <p>Block compression</p>
+      </td>
+      <td style="text-align:left">Sharing datasets between MR jobs</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Parquet</td>
+      <td style="text-align:left">
+        <p>Column-based binary format</p>
+        <p>Quick column access</p>
+        <p>Block compression</p>
+        <p>Append data</p>
+        <p>Need additional parsing, which may slow down reading</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ORC</td>
+      <td style="text-align:left">
+        <p>Splittable</p>
+        <p>Block compression</p>
+        <p>Lightweight indexing</p>
+        <p>Need additional parsing, which may slow down reading</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 7. Stream Processing
 
