@@ -83,6 +83,7 @@ There are some big differences between relational and non relational databases, 
         <ul>
           <li>Complicated querying</li>
           <li>Reliable ACID transactions</li>
+          <li>Relationship constraints</li>
           <li>Operations are treated as transactions automatically</li>
           <li>Query routine analysis</li>
           <li>Referential integrity (cascading)</li>
@@ -94,6 +95,8 @@ There are some big differences between relational and non relational databases, 
           <li>No SQL injection</li>
           <li>Easy sharding</li>
           <li>No schema validation allows for experimenting</li>
+          <li>High availability</li>
+          <li>Open source</li>
         </ul>
       </td>
     </tr>
@@ -102,14 +105,19 @@ There are some big differences between relational and non relational databases, 
       <td style="text-align:left">
         <ul>
           <li>Doesn't scale that well</li>
+          <li>Normalization means lots of joins, which may affect speed</li>
+          <li>Hard to work with semi-structured data</li>
         </ul>
       </td>
       <td style="text-align:left">
         <ul>
-          <li>No joins (mostly)</li>
+          <li>Limited support for joins</li>
+          <li>Limited indexing</li>
+          <li>Denormalization means mass update</li>
           <li>Manually handle transactions</li>
           <li>Nested documents are hard to keep consistent</li>
           <li>No schema validation may leave DB in invalid state</li>
+          <li>Weaker consistency (BASE)</li>
         </ul>
       </td>
     </tr>
@@ -144,6 +152,8 @@ There are some big differences between relational and non relational databases, 
 If there's little structure, and the DB must handle large VVV data, a NoSQL database is a better choice. Also, the lack of schema and migrations allows for quick development. To choose which NoSQL DB is best suited for your use case, this interesting decision tree may be useful:
 
 ![Felix Gessert: https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d](.gitbook/assets/image%20%288%29.png)
+
+Key-Value stores \(Redis\) are super fast in memory stores. Document stores \(MongoDB\) are super flexible schemaless stores with built-in features and query system, a RDBMS replacement. Wide-Column stores \(Cassandra\) are super capable of heavy writes and real-time querying, good when you are dealing with massive data, real-time.
 
 ### CAP
 
@@ -188,7 +198,7 @@ Because networks are not reliable, and eventual consistency is never instant, we
 
 * **CP:** wait for a response from the partitioned node which could result in a timeout error. The system can also choose to return an error, depending on the scenario you desire. \(Choose Consistency over Availability when your business requirements dictate atomic reads and writes\)
 * **AP:** return the most recent version of the data you have, which could be stale. This system state will also accept writes that can be processed later when the partition is resolved. \(Choose when consistency is not crucial\)
-* **CA:** highly available and consistent, but not partition tolerant \(Choose for \)
+* **CA:** highly available and consistent, but not partition tolerant \(Choose when you can't have network partitions\)
 
 ### Transactions, ACID and BASE
 
@@ -206,6 +216,8 @@ BASE is an acronym that describes eventually consistent services \(optimistic re
 * **Eventual Consistency:** describes the situation where a DDBS achieves high availability while loosely guaranteeing that data, in the absence of updates, will eventually reflect the last updated value across the system, and therefore the data may vary in value until the system reaches a consistent state.
 
 ## 4. Data Ingestion
+
+
 
 ## 5. File System
 

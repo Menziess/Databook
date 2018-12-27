@@ -23,7 +23,8 @@
 | IOT | Internet of Things |
 | VVV | Volume, Variety, Velocity |
 | DWH | Data Warehouse |
-| ACID | Atomicity, Consistency, Isolation, Durability |
+| ACID | Atomicity, Consistency, Isolation, Durability \(SQL\) |
+| BASE | Basically Available Soft state Eventual consistency \(NoSQL\) |
 | CAP | Consistency, Availability, Partition Tolerance |
 | ERP | Enterprise Resource Planning |
 | SAP | Systems, Applications and Products |
