@@ -286,7 +286,7 @@ The files that you store on the file system may be stored in a particular format
     <tr>
       <td style="text-align:left">JSON</td>
       <td style="text-align:left">Dictionary-like</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Applications</td>
     </tr>
     <tr>
       <td style="text-align:left">Avro</td>
@@ -297,7 +297,10 @@ The files that you store on the file system may be stored in a particular format
         <p>Block compression</p>
         <p>Splittable</p>
       </td>
-      <td style="text-align:left">Event data that changes over time</td>
+      <td style="text-align:left">
+        <p>Event data that changes over time</p>
+        <p>Adding, removing, renaming columns later</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">SEQ</td>
@@ -315,19 +318,15 @@ The files that you store on the file system may be stored in a particular format
         <p>Quick column access</p>
         <p>Block compression</p>
         <p>Append data</p>
-        <p>Need additional parsing, which may slow down reading</p>
+        <p>Optimized for reading</p>
       </td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Column specific queries
+          <br />Adding columns later
+          <br />
+        </p>
+        <p></p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">ORC</td>
@@ -335,14 +334,19 @@ The files that you store on the file system may be stored in a particular format
         <p>Splittable</p>
         <p>Block compression</p>
         <p>Lightweight indexing</p>
-        <p>Need additional parsing, which may slow down reading</p>
+        <p>Optimized for reading</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Column specific queries</td>
     </tr>
   </tbody>
-</table>
+</table>There's the idea of wide and narrow datasets:
+
+* **Narrow:** 10 million rows, 10 columns
+* **Wide:** 4 million rows, 1000 columns
 
 ## 7. Stream Processing
+
+
 
 ## 8. Batch Processing
 
