@@ -10,7 +10,7 @@ Databricks is a company founded by the creators of Apache Spark. It may also ref
 * Collaboration in the same notebooks, revision control, IDE / Github integration
 * Data management, ability to connect different data sources
 
-![Unified Analytics Platform on Azure](../.gitbook/assets/image%20%286%29.png)
+![Unified Analytics Platform on Azure](../.gitbook/assets/image%20%287%29.png)
 
 It improves collaboration between Data Scientists, Data Engineers, and Business Analysts.
 

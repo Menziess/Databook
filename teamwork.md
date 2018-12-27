@@ -35,13 +35,13 @@ Scrum is more suitable for fast delivery of complex products. Kanban is better s
 
 You may have heard about the t-shape analogy:
 
-![](.gitbook/assets/image%20%283%29.png)
+![](.gitbook/assets/image%20%284%29.png)
 
 Where the horizontal bar represent the small bit of experience in different disciplines, and the vertical bar represents a lot of experience in a particular discipline. Instead of separating teams based on disciplines, it is valuable to have people with different disciplines mixed together in **cross-functional** teams.
 
 | Multidisciplinary people | Cross-functional team |
 | :--- | :--- |
-| ![](.gitbook/assets/image%20%282%29.png) | ![](.gitbook/assets/image%20%287%29.png) |
+| ![](.gitbook/assets/image%20%283%29.png) | ![](.gitbook/assets/image%20%288%29.png) |
 
 As each team has its strengths and weaknesses, so does each member within these teams. It is important to be aware of this fact to optimize productivity, creativity, stability, and precision of the team.
 

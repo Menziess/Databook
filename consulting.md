@@ -6,6 +6,8 @@ description: Being able to provide professional or expert advice.
 
 A consultant is a professional who provides expert advice in a particular area. A Data Engineer 🔢 👨‍🔧 may provide expert advice in implementing new solutions from the ground up, or improving existing solutions. I both cases, it is valuable to translate business requirements into a high level architectural blueprint.
 
+![Microsoft Azure Stream Analytics analyzing real-time data](.gitbook/assets/image.png)
+
 ## 1. Basics
 
 Does the system have to be real-time? What's the minimal required response time? What kind of skills does the team poses? Is performance more important than readability? Should data be available and highly consistent? Is there enough time, or enough money? Is the selected solution robust, flexible, secure?
@@ -151,7 +153,7 @@ There are some big differences between relational and non relational databases, 
 
 If there's little structure, and the DB must handle large VVV data, a NoSQL database is a better choice. Also, the lack of schema and migrations allows for quick development. To choose which NoSQL DB is best suited for your use case, this interesting decision tree may be useful:
 
-![Felix Gessert: https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d](.gitbook/assets/image%20%288%29.png)
+![Felix Gessert: https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d](.gitbook/assets/image%20%289%29.png)
 
 Key-Value stores \(Redis\) are super fast in memory stores. Document stores \(MongoDB\) are super flexible schemaless stores with built-in features and query system, a RDBMS replacement. Wide-Column stores \(Cassandra\) are super capable of heavy writes and real-time querying, good when you are dealing with massive data, real-time.
 
@@ -346,7 +348,15 @@ The files that you store on the file system may be stored in a particular format
 
 ## 7. Stream Processing
 
+Stream processing is a paradigm, equivalent to reactive programming, allowing for more parallelism. A stream is an unbounded sequence of something. In order to process an endless sequence of data, you would have to cut the sequence somewhere, store it, then process it, and then do the next batch and worry about aggregating the data at some point. This would require heavy machinery, to handle large batches of data. And some data is so huge by nature, that it is impossible to store it all.
 
+### Native Streaming
+
+Storm, Flink, Kafka Streams, and Samza, can process every record as it arrives. Native Streaming feels natural as every record is processed as soon as it arrives, allowing the framework to achieve the minimum latency possible. But it also means that it is hard to achieve fault tolerance without compromising on throughput as for each record, we need to track and checkpoint once processed. Also, state management is easy as there are long running processes which can maintain the required state easily.
+
+### Micro Batching
+
+Spark Streaming, Storm-Trident, micro batch records, introducing a small delay. Fault tolerance comes for free as it is essentially a batch and throughput is also high as processing and check-pointing will be done in one shot for group of records. But it will be at some cost of latency and it will not feel like a natural streaming. Also efficient state management will be a challenge to maintain.
 
 ## 8. Batch Processing
 
