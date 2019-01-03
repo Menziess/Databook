@@ -41,7 +41,7 @@ Where the horizontal bar represent the small bit of experience in different disc
 
 | Multidisciplinary people | Cross-functional team |
 | :--- | :--- |
-| ![](.gitbook/assets/image%20%283%29.png) | ![](.gitbook/assets/image%20%288%29.png) |
+| ![](.gitbook/assets/image%20%283%29.png) | ![](.gitbook/assets/image%20%289%29.png) |
 
 As each team has its strengths and weaknesses, so does each member within these teams. It is important to be aware of this fact to optimize productivity, creativity, stability, and precision of the team.
 

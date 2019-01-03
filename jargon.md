@@ -2,6 +2,7 @@
 
 | Term | Meaning |
 | :--- | :--- |
+| Serverless | No infrastructure is set up in advance, but is spun up on demand, where the provider dynamically manages the allocation of resources |
 | Idempotent | The property of certain operations in mathematics and computer science that they can be applied multiple times without changing the result beyond the initial application |
 | Orchestration | Coordinating multiple systems at once, for example: migrating databases, scaling docker services, etc... |
 | Provisioning | Getting or providing resources and services, such as network bandwidth, VM's, libraries, etc... |
@@ -30,9 +31,10 @@
 | BASE | Basically Available Soft state Eventual consistency \(NoSQL\) |
 | CAP | Consistency, Availability, Partition Tolerance |
 | ERP | Enterprise Resource Planning |
-| SAP | Systems, Applications and Products |
+| SAP | Systems, Applications and Products \(An ERP system, german company\) |
 | ORM | Object Relational Mapping |
 | DAG | Directed Acyclic Graph |
+| SLA | Service-level Agreement |
 | HA | High Availability |
 | MR | Map-Reduce |
 | ML | Machine Learning |
