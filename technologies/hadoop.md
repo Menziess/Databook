@@ -24,9 +24,9 @@ While a slave node may contain:
 
 ## 3. Installation
 
+Here is a very crude example of how you can install an Hadoop distribution:
 
-
-```text
+```bash
 FROM kovarn/python-java
 
 # Set environmental variables
@@ -50,3 +50,90 @@ RUN mkdir localhadoop/conf && \
 RUN hdfs dfs -mkdir localhdfs
 ```
 
+## 4. HDFS
+
+There are two shells to interact with the file system. That is, the local and distributed file system. The following line would list local files, including distributed files that happen to be stored at that particular location.
+
+```bash
+hdfs fs ls
+```
+
+Then we can also use the following line to print out files stored in a distributed fashion. 
+
+```bash
+hdfs dfs ls
+```
+
+One would typically get a file onto the system in some way, by downloading it for example. After that one would put the file onto hdfs:
+
+```bash
+cd ~/Downloads
+wget http://files.grouplens.org/datasets/movielens/ml-latest-small.zip
+unzip ml-latest-small.zip
+
+hdfs dfs -mkdir ~/localhdfs/movies
+hdfs dfs -put ~/Downloads/ml-latest-small/movies.csv ~/localhdfs/movies/
+```
+
+Notice that we specify a folder, instead of a filename when we put the file onto hdfs. Now that it's there, we can inspect its contents using `-cat` or `-tail`
+
+```bash
+hdfs dfs -cat ~/localhdfs/movies/movies.csv | head
+hdfs dfs -tail ~/localhdfs/movies/movies.csv
+```
+
+## 5. MapReduce
+
+Before the rise of abstractions such as Hive, Pig, and Impala, one would typically write a MapReduce JAR program that contained the map and reduce code and the configuration to run a Hadoop job.
+
+```bash
+examples_jar="${HADOOP_HOME}/share/hadoop/mapreduce/hadoop-mapreduce-examples-<hadoop version>.jar"
+```
+
+This location contains some examples which you can as such:
+
+```bash
+hadoop jar {examples_jar} wordcount movies output
+hdfs dfs -ls output
+```
+
+After the job finishes, the output will contain a `_SUCCESS` flag to indicate that the processing was successful. If something appears to be going wrong, you can stop a running job as such:
+
+```bash
+mapred job -list
+mapred job -kill <jobid>
+```
+
+## 6. HBase
+
+## 7. Hive, Impala, Pig, 
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Technology</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Hive</td>
+      <td style="text-align:left">Data Warehouse Infrastructure on Hadoop</td>
+      <td style="text-align:left">
+        <p>Generates query at compile time</p>
+        <p>Cold start problem</p>
+        <p>More universal pluggable language</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Impala</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Runtime code generation</p>
+        <p>Always ready</p>
+        <p>Brute processing for fast analytic results</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
