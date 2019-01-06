@@ -8,6 +8,8 @@ Hadoop is a scalable, open source, distributed, data-intensive, fault-tolerant c
 * HDFS: Hadoop Distributed File System
 * MapReduce: A software framework for distributed processing
 
+When people talk about Hadoop, they often refer to the [Hadoop Ecosystem](hadoop.md#6-ecosystem), which includes various components of the Apache Hadoop software library, as well as accessories and tools provided by the Apache Software Foundation.
+
 ## 2. Nodes
 
 Master- and slave nodes organize the Hadoop cluster. Either node type may take on several roles. For example, the master node contains:
@@ -75,7 +77,7 @@ hdfs dfs -mkdir ~/localhdfs/movies
 hdfs dfs -put ~/Downloads/ml-latest-small/movies.csv ~/localhdfs/movies/
 ```
 
-Notice that we specify a folder, instead of a filename when we put the file onto hdfs. Now that it's there, we can inspect its contents using `-cat` or `-tail`
+Notice that we specify a folder, instead of a filename when we put the file onto hdfs. Now that it's there, we can inspect its contents using `-cat` or `-tail`:
 
 ```bash
 hdfs dfs -cat ~/localhdfs/movies/movies.csv | head
@@ -104,7 +106,17 @@ mapred job -list
 mapred job -kill <jobid>
 ```
 
-## 6. HBase
+## 6. Hadoop Ecosystem 
+
+Some components that comprise the ecosystem are:
+
+* HBase is a non-relational 
+* Oozie: workflow scheduler
+* Sqoop
+* Gobblin
+* Hive
+* Impala
+* Pig
 
 ## 7. Hive, Impala, Pig, 
 
@@ -134,6 +146,11 @@ mapred job -kill <jobid>
         <p>Always ready</p>
         <p>Brute processing for fast analytic results</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Pig</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>

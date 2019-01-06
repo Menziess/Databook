@@ -1,40 +1,23 @@
 # Docker
 
-## 1. Development
+## 1. Introduction
 
-This chapter is a condensed walk-through of the official Docker [Getting Started Guide](https://docs.docker.com/get-started/), making use of an example repository [Python-Vscode](https://github.com/Menziess/Python-Vscode) to demonstrate some basic docker commands.
+This chapter is a condensed walk-through of the official Docker [Getting Started Guide](https://docs.docker.com/get-started/), making use of an example repository [Python-Vscode](https://github.com/Menziess/Python-Vscode) to demonstrate some basic docker commands. Now what's the main difference between a VM and Docker?
 
-### 1.1 Using Docker
+![Docker virtualizes just the app and its dependencies.](../.gitbook/assets/image%20%285%29.png)
 
-A container can be run with a shared volume, so that code changes are immediately visible, and the container is deleted after use. Create a docker image with debug enabled by setting the `ENV FLASK_DEBUG` flag to `1`, then run:
+## 2. Installation
 
-```bash
-docker run -p 80:80 --rm menziess/python-vscode
-```
+The installation steps may vary between distributions and OS's. Follow the steps to install `docker-ce` from the [official documentation](https://docs.docker.com/install/#supported-platforms).
 
-### 1.2 Using Virtual Environment
-
-Clone this repository and create a virtual environment with a tool such as 'virtualenv' in the root folder, and run:
+After that, pull the repository that is used in this tutorial from [https://github.com/Menziess/Python-Vscode](https://github.com/Menziess/Python-Vscode):
 
 ```bash
-source ./development.sh
+git clone git@github.com:Menziess/Python-Vscode.git
+cd Python-Vscode
 ```
 
-This will activate the virtual environment and install dev dependencies and command-line tools.
-
-Run the flask app:
-
-```bash
-flask run
-```
-
-Run tests manually:
-
-```bash
-python -m pytest test/
-```
-
-## 2. Run and Deploy
+## 3. Run and Deploy
 
 Develop, deploy, and run applications with containers.
 
@@ -48,20 +31,20 @@ For example: an application, or a stack, may contain a database service, and a w
 
 ### 2.1 Build Image
 
-Verify that the Dockerfile exists
+Verify that the Dockerfile exists:
 
 ```bash
 $ ls
 Dockerfile        app.py            requirements.txt
 ```
 
-Build the image from the dockerfile
+Build the image from the dockerfile:
 
 ```bash
 docker build -t menziess/python-vscode:latest .
 ```
 
-Show the image that has been built
+Show the image that has been built:
 
 ```bash
 $ docker image ls
@@ -70,13 +53,13 @@ REPOSITORY             TAG                 IMAGE ID
 menziess/python-vscode latest              326387cea398
 ```
 
-Run the app in detached mode
+Run the app in detached mode:
 
 ```bash
 docker run -p 80:80 menziess/python-vscode
 ```
 
-Show the running containers
+Show the running containers:
 
 ```bash
 $ docker container ls
@@ -84,47 +67,47 @@ CONTAINER ID        IMAGE                  COMMAND             CREATED
 1fa4ab2cf395        menziess/python-vscode "python app.py"     28 seconds ago
 ```
 
-Stop the running container
+Stop the running container:
 
 ```bash
 docker container stop 1fa4ab2cf395
 ```
 
-Push container
+Push container to your own dockerhub repository:
 
 ```bash
 docker login
-docker push menziess/python-vscode
+docker push <dockerhub-username>/python-vscode
 ```
 
 ### 2.2 Scale Service \(Multiple Containers - Single Node\)
 
-Verify that the `docker-compose.yml` file exists
+Verify that the `docker-compose.yml` file exists:
 
 ```bash
 $ ls
 Dockerfile        app.py            requirements.txt      docker-compose.yml
 ```
 
-We initialize a swarm \(of one node, our local computer\)
+We initialize a swarm \(of one node, our local computer\):
 
 ```bash
 docker swarm init
 ```
 
-Then we deploy our service
+Then we deploy our service:
 
 ```bash
 docker stack deploy -c docker-compose.yml getstartedlab
 ```
 
-And we scale it by increasing the number of replicas in the .yml file, and simply run the previous command again
+And we scale it by increasing the number of replicas in the .yml file, and simply run the previous command again:
 
 ```bash
 docker stack deploy -c docker-compose.yml getstartedlab
 ```
 
-We take down the app, and leave the swarm
+We take down the app, and leave the swarm:
 
 ```bash
 docker stack rm getstartedlab
@@ -133,27 +116,27 @@ docker swarm leave --force
 
 ### 2.3 Distributed Swarm \(Containers Across Cluster - Multiple Nodes\)
 
-Start two VM's using virtualbox and docker-machine
+Start two VM's using virtualbox and docker-machine:
 
 ```bash
 docker-machine create --driver virtualbox myvm1
 docker-machine create --driver virtualbox myvm2
 ```
 
-Initialize the first VM as a swarm manager, as we did in 3.2
+Initialize the first VM as a swarm manager, as we did in 3.2:
 
 ```bash
 docker-machine ls
 docker-machine ssh myvm1 "docker swarm init --advertise-addr <myvm1 ip>"
 ```
 
-Copy the command that is show in terminal, and ssh into the second VM, then paste the command to add it as a worker to the swarm
+Copy the command that is show in terminal, and ssh into the second VM, then paste the command to add it as a worker to the swarm:
 
 ```bash
 docker-machine ssh myvm2 "<the command that is shown>"
 ```
 
-Show all the nodes in the swarm
+Show all the nodes in the swarm:
 
 ```bash
 docker-machine ssh myvm1 "docker node ls"
@@ -161,7 +144,7 @@ docker-machine ssh myvm1 "docker node ls"
 
 Now you can walk through 3.2 again, and deploy the stack, but on the distributed swarm this time. If you do this, run `docker-machine ls` to reveal the VM ip addresses to access the application in the browser.
 
-Finally, we can leave the swarm from within each VM, remove the stack
+Finally, we can leave the swarm from within each VM, remove the stack:
 
 ```bash
 docker-machine ssh myvm2 "docker swarm leave"
@@ -174,7 +157,7 @@ docker-machine stop myvm2
 
 ### 2.4 Stack Services \(Adding Database\)
 
-We will expand our `docker-compose.yml` file by adding more services. We will add a docker visualizer and a redis database. The database will require a volume that is stored on the swarm manager called `/data`, let's make that folder and redeploy
+We will expand our `docker-compose.yml` file by adding more services. We will add a docker visualizer and a redis database. The database will require a volume that is stored on the swarm manager called `/data`, let's make that folder and redeploy:
 
 ```bash
 docker-machine ssh myvm1 "mkdir ./data"
@@ -183,7 +166,33 @@ docker stack deploy -c docker-compose.yml getstartedlab
 
 Our application should now display the number of visits.
 
-## 3. Useful Dockerfile Commands
+## 4. Containers For Development
+
+It is sometimes useful to develop apps in a docker container to ensure consistency between different developers' environments.
+
+### 4.1 Docker Approach
+
+A container can be run with a shared volume, so that code changes are immediately visible, and the container is deleted after use. Create a docker image with debug enabled by setting the `ENV FLASK_DEBUG` flag to `1`, then run:
+
+```bash
+docker run -p 80:80 --rm menziess/python-vscode
+```
+
+### 4.2 Traditional Approach
+
+Create a virtual environment with a tool such as 'virtualenv' in the root folder, and run:
+
+```bash
+source ./development.sh
+```
+
+This will activate the virtual environment and install dev dependencies and command-line tools. Run the flask app:
+
+```bash
+flask run
+```
+
+## 5. Useful Dockerfiles
 
 {% code-tabs %}
 {% code-tabs-item title="Installing java" %}

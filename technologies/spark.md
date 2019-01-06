@@ -21,7 +21,7 @@ rm spark-2.4.0-bin-hadoop2.7.tgz
 sudo mv spark-2.4.0-bin-hadoop2.7/ /usr/local/spark
 ```
 
-Add to PATH
+Add to PATH:
 
 ```bash
 echo "# For spark!" >> ~/.bashrc
@@ -30,7 +30,7 @@ echo "export PATH=$PATH:/usr/local/spark/bin" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Verify the installation
+Verify the installation:
 
 ```text
 pyspark

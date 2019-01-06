@@ -153,7 +153,7 @@ There are some big differences between relational and non relational databases, 
 
 If there's little structure, and the DB must handle large VVV data, a NoSQL database is a better choice. Also, the lack of schema and migrations allows for quick development. To choose which NoSQL DB is best suited for your use case, this interesting decision tree may be useful:
 
-![Felix Gessert: https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d](.gitbook/assets/image%20%2810%29.png)
+![Felix Gessert: https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d](.gitbook/assets/image%20%2811%29.png)
 
 Key-Value stores \(Redis\) are super fast in memory stores. Document stores \(MongoDB\) are super flexible schemaless stores with built-in features and query system, a RDBMS replacement. Wide-Column stores \(Cassandra\) are super capable of heavy writes and real-time querying, good when you are dealing with massive data, real-time.
 
