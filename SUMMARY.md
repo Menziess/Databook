@@ -8,6 +8,7 @@
 ## Technologies
 
 * [Docker](technologies/docker.md)
+* [Kubernetes](technologies/kubernetes.md)
 * [Hadoop](technologies/hadoop.md)
 * [Spark](technologies/spark.md)
 * [Kafka](technologies/kafka.md)
