@@ -83,7 +83,7 @@ df.toPandas()
 df.printSchema()
 ```
 
-#### 4.2 Create Dataframe
+#### 4.2 Create DataFrame
 
 Specify data and schema:
 
